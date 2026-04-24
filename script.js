@@ -44,8 +44,25 @@ if (themeToggle) {
 }
 
 if (menuToggle && navMenu) {
-  menuToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("open");
+  menuToggle.setAttribute("aria-expanded", "false");
+  menuToggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const open = navMenu.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  navMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+  const siteHeader = document.querySelector(".site-header");
+  document.addEventListener("click", (e) => {
+    if (!navMenu.classList.contains("open")) return;
+    const t = e.target;
+    if (siteHeader && (siteHeader.contains(t) || t === siteHeader)) return;
+    navMenu.classList.remove("open");
+    menuToggle.setAttribute("aria-expanded", "false");
   });
 }
 
@@ -95,6 +112,11 @@ if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
 
 function initBackgroundEffects() {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return;
+  }
+  if (window.matchMedia("(max-width: 940px)").matches) {
+    const canvasEl = document.getElementById("fxCanvas");
+    if (canvasEl) canvasEl.style.display = "none";
     return;
   }
   const canvas = document.getElementById("fxCanvas");
