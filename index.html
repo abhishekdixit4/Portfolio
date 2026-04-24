@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABHISHEK DIXIT</title>
+    <meta
+      name="description"
+      content="Abhishek Dixit — B.Tech CSE, software developer. Actively seeking software engineering opportunities."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("portfolio-theme");
+          if (t === "light" || t === "dark") {
+            document.documentElement.setAttribute("data-theme", t);
+          } else {
+            document.documentElement.setAttribute("data-theme", "dark");
+          }
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="fx-backdrop" id="fxBackdrop" aria-hidden="true">
+      <div class="fx-aurora" aria-hidden="true"></div>
+      <div class="fx-mesh-conic" aria-hidden="true"></div>
+      <div class="fx-orb-decor fx-orb-decor--1" aria-hidden="true"></div>
+      <div class="fx-orb-decor fx-orb-decor--2" aria-hidden="true"></div>
+      <div class="fx-orb-decor fx-orb-decor--3" aria-hidden="true"></div>
+      <canvas class="fx-canvas" id="fxCanvas" width="1" height="1"></canvas>
+    </div>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">ABHISHEK DIXIT</a>
+        <nav class="nav" id="navMenu">
+          <a class="active" href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="experience.html">Experience</a>
+          <a href="extracurricular.html">Extracurricular</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-end">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            type="button"
+            title="Light or dark theme"
+            aria-label="Switch to light mode"
+          >
+            <span class="theme-icon theme-icon--sun" aria-hidden="true"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="4" />
+                <path
+                  d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                />
+              </svg
+            ></span>
+            <span class="theme-icon theme-icon--moon" aria-hidden="true"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg
+            ></span>
+          </button>
+          <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="container hero">
+        <article class="card card-hero">
+          <div class="hero-with-photo">
+            <div class="profile-wrap profile-wrap--hero" title="Abhishek Dixit">
+              <img
+                src="profile.jpg"
+                width="400"
+                height="480"
+                alt="Abhishek Dixit — B.Tech CSE, SRM IST"
+                class="profile-photo"
+                loading="eager"
+                decoding="async"
+              />
+            </div>
+            <div class="hero-text">
+              <p class="eyebrow">
+                B.Tech Computer Science &amp; Engineering |
+                <a
+                  class="ext-link"
+                  href="https://www.srmist.edu.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >SRM IST (Kattankulathur)</a
+                >
+              </p>
+              <p class="status-line">
+                <span class="status-dot" aria-hidden="true"></span>
+                Actively seeking software engineering opportunities
+              </p>
+              <h1>Designing and building impactful software with modern engineering.</h1>
+              <p class="code-snippet" aria-hidden="true">
+                <span class="code-muted">// career.status</span><br />
+                <span class="code-kw">const</span> <span class="code-name">openTo</span> =
+                [<span class="code-str">"full_time"</span>, <span class="code-str">"internship"</span>,
+                <span class="code-str">"new_grad"</span>];
+              </p>
+              <p class="muted">
+                I build practical, clean, and scalable products across web development,
+                automation, and AI-assisted systems.
+              </p>
+              <div class="cta">
+                <a class="btn btn-primary" href="projects.html">Explore Projects</a>
+                <a class="btn btn-ghost" href="resume.pdf" download>Download Resume</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2 class="section-title">Quick Overview</h2>
+          <ul class="stats">
+            <li>
+              Software Development Intern at
+              <a
+                class="ext-link"
+                href="https://www.sail.co.in/en/plants/bhilai-steel-plant"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Bhilai Steel Plant (SAIL)</a
+              >
+              —
+              <a
+                class="ext-link"
+                href="https://cgstate.gov.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Chhattisgarh</a
+              >, India
+            </li>
+            <li>
+              AI-Based Personal Nutrition Recommendation System (full-stack) —
+              <a
+                class="ext-link"
+                href="https://nutriai-lemon.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                >nutriai-lemon.vercel.app</a
+              >
+            </li>
+            <li>
+              Empathetic AI Mental Wellness Support (full-stack) —
+              <a
+                class="ext-link"
+                href="https://empathetic-ai.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >empathetic-ai.vercel.app</a
+              >
+            </li>
+            <li>
+              Focused on clean code, full-stack builds, and turning ideas into working products with modern tools.
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p class="muted">© <span id="year"></span> Abhishek Dixit</p>
+        <div class="footer-links">
+          <a href="https://linkedin.com/in/abhishek-dixit-203904288" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/abhishekdixit4" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="extracurricular.html">Extracurricular</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABHISHEK DIXIT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("portfolio-theme");
+          if (t === "light" || t === "dark") {
+            document.documentElement.setAttribute("data-theme", t);
+          } else {
+            document.documentElement.setAttribute("data-theme", "dark");
+          }
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="fx-backdrop" id="fxBackdrop" aria-hidden="true">
+      <div class="fx-aurora" aria-hidden="true"></div>
+      <div class="fx-mesh-conic" aria-hidden="true"></div>
+      <div class="fx-orb-decor fx-orb-decor--1" aria-hidden="true"></div>
+      <div class="fx-orb-decor fx-orb-decor--2" aria-hidden="true"></div>
+      <div class="fx-orb-decor fx-orb-decor--3" aria-hidden="true"></div>
+      <canvas class="fx-canvas" id="fxCanvas" width="1" height="1"></canvas>
+    </div>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">ABHISHEK DIXIT</a>
+        <nav class="nav" id="navMenu">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a class="active" href="projects.html">Projects</a>
+          <a href="experience.html">Experience</a>
+          <a href="extracurricular.html">Extracurricular</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-end">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            type="button"
+            title="Light or dark theme"
+            aria-label="Switch to light mode"
+          >
+            <span class="theme-icon theme-icon--sun" aria-hidden="true"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="4" />
+                <path
+                  d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                />
+              </svg
+            ></span>
+            <span class="theme-icon theme-icon--moon" aria-hidden="true"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg
+            ></span>
+          </button>
+          <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="container stack">
+        <article class="card">
+          <h1 class="section-title">Featured Projects</h1>
+          <p class="muted">Selected work spanning enterprise software, ML, and full-stack applications.</p>
+        </article>
+
+        <section class="grid-2">
+          <article class="card">
+            <h3>Enterprise E-Payslip Rendering and Distribution</h3>
+            <p class="meta">Python, HTML, CSS</p>
+            <ul class="list">
+              <li>
+                Built for
+                <a
+                  class="ext-link"
+                  href="https://www.sail.co.in/en/plants/bhilai-steel-plant"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Bhilai Steel Plant (SAIL)</a
+                >, an integrated steel plant in
+                <a
+                  class="ext-link"
+                  href="https://cgstate.gov.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Chhattisgarh</a
+                >, India.
+              </li>
+              <li>Generated and distributed employee e-payslips in an enterprise workflow.</li>
+              <li>Implemented automated PDF generation and structured HTML layout for payslips.</li>
+            </ul>
+            <a class="btn btn-ghost" href="https://github.com/abhishekdixit4" target="_blank" rel="noreferrer">View Code</a>
+          </article>
+
+          <article class="card">
+            <h3>AI-Based Personal Nutrition Recommendation System</h3>
+            <p class="meta">React, TypeScript, Tailwind CSS, Appwrite</p>
+            <ul class="list">
+              <li>Developed full-stack personalized nutrition suggestions based on user inputs and food data.</li>
+              <li>Added image capture/upload and dynamic dietary recommendation generation.</li>
+              <li>Integrated Appwrite for authentication, database management, and real-time operations.</li>
+            </ul>
+            <div class="cta">
+              <a class="btn btn-primary" href="https://github.com/abhishekdixit4" target="_blank" rel="noreferrer">View Code</a>
+              <a class="btn btn-ghost" href="https://nutriai-lemon.vercel.app" target="_blank" rel="noreferrer">Live Website</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Breast Cancer Prediction</h3>
+            <p class="meta">Python, Scikit-learn, Pandas, NumPy</p>
+            <ul class="list">
+              <li>Built Logistic Regression and SVM models with 95% accuracy.</li>
+              <li>Performed preprocessing, feature engineering, and evaluation.</li>
+            </ul>
+            <a class="btn btn-ghost" href="https://github.com/abhishekdixit4" target="_blank" rel="noreferrer">View Code</a>
+          </article>
+
+          <article class="card">
+            <h3>Empathetic AI Mental Wellness Support</h3>
+            <p class="meta">React, TypeScript, Tailwind CSS, Supabase</p>
+            <ul class="list">
+              <li>Built mood tracking and journaling features with a chat-like interface.</li>
+              <li>Integrated authentication and real-time data handling.</li>
+            </ul>
+            <div class="cta">
+              <a class="btn btn-primary" href="https://github.com/abhishekdixit4" target="_blank" rel="noreferrer">View Code</a>
+              <a class="btn btn-ghost" href="https://empathetic-ai.vercel.app/" target="_blank" rel="noreferrer">Live Website</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Student Attendance System</h3>
+            <p class="meta">Python CLI</p>
+            <ul class="list">
+              <li>Built a CLI-based attendance management system with record storage.</li>
+              <li>Implemented file handling for student data and attendance tracking.</li>
+            </ul>
+            <a class="btn btn-ghost" href="https://github.com/abhishekdixit4" target="_blank" rel="noreferrer">View Code</a>
+          </article>
+
+          <article class="card">
+            <h3>Portfolio Website</h3>
+            <p class="meta">HTML, CSS</p>
+            <ul class="list">
+              <li>Designed and developed a responsive personal portfolio site.</li>
+              <li>Showcased projects, skills, and contact details with modern UI design.</li>
+            </ul>
+            <a class="btn btn-ghost" href="index.html">View Live</a>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p class="muted">© <span id="year"></span> Abhishek Dixit</p>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

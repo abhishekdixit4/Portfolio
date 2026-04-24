@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABHISHEK DIXIT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("portfolio-theme");
+          if (t === "light" || t === "dark") {
+            document.documentElement.setAttribute("data-theme", t);
+          } else {
+            document.documentElement.setAttribute("data-theme", "dark");
+          }
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="fx-backdrop" id="fxBackdrop" aria-hidden="true">
+      <div class="fx-aurora" aria-hidden="true"></div>
+      <div class="fx-mesh-conic" aria-hidden="true"></div>
+      <div class="fx-orb-decor fx-orb-decor--1" aria-hidden="true"></div>
+      <div class="fx-orb-decor fx-orb-decor--2" aria-hidden="true"></div>
+      <div class="fx-orb-decor fx-orb-decor--3" aria-hidden="true"></div>
+      <canvas class="fx-canvas" id="fxCanvas" width="1" height="1"></canvas>
+    </div>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">ABHISHEK DIXIT</a>
+        <nav class="nav" id="navMenu">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="experience.html">Experience</a>
+          <a class="active" href="extracurricular.html">Extracurricular</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-end">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            type="button"
+            title="Light or dark theme"
+            aria-label="Switch to light mode"
+          >
+            <span class="theme-icon theme-icon--sun" aria-hidden="true"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="4" />
+                <path
+                  d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                />
+              </svg
+            ></span>
+            <span class="theme-icon theme-icon--moon" aria-hidden="true"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg
+            ></span>
+          </button>
+          <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="container stack">
+        <article class="card">
+          <h1 class="section-title">Extracurricular</h1>
+          <p class="muted">
+            Leadership through the Directorate of Student Affairs (DSA),
+            <a
+              class="ext-link"
+              href="https://www.srmist.edu.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >SRM IST (Kattankulathur)</a
+            >.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Directorate of Student Affairs (DSA)</h2>
+          <p class="meta">
+            Committee Head, Discipline Committee |
+            <a
+              class="ext-link"
+              href="https://www.srmist.edu.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >SRM Institute of Science and Technology</a
+            >
+          </p>
+          <ul class="list">
+            <li>Led a team of 160+ members responsible for maintaining discipline during major university events.</li>
+            <li>Supervised operations for flagship events: Milan, Jhalak, Shuru, Rendezvous, and Mini-Milan.</li>
+            <li>Coordinated with faculty, security teams, and event organizers to ensure smooth and safe execution of events.</li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p class="muted">© <span id="year"></span> Abhishek Dixit</p>
+        <div class="footer-links">
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

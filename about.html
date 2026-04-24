@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ABHISHEK DIXIT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("portfolio-theme");
+          if (t === "light" || t === "dark") {
+            document.documentElement.setAttribute("data-theme", t);
+          } else {
+            document.documentElement.setAttribute("data-theme", "dark");
+          }
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="fx-backdrop" id="fxBackdrop" aria-hidden="true">
+      <div class="fx-aurora" aria-hidden="true"></div>
+      <div class="fx-mesh-conic" aria-hidden="true"></div>
+      <div class="fx-orb-decor fx-orb-decor--1" aria-hidden="true"></div>
+      <div class="fx-orb-decor fx-orb-decor--2" aria-hidden="true"></div>
+      <div class="fx-orb-decor fx-orb-decor--3" aria-hidden="true"></div>
+      <canvas class="fx-canvas" id="fxCanvas" width="1" height="1"></canvas>
+    </div>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">ABHISHEK DIXIT</a>
+        <nav class="nav" id="navMenu">
+          <a href="index.html">Home</a>
+          <a class="active" href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="experience.html">Experience</a>
+          <a href="extracurricular.html">Extracurricular</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-end">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            type="button"
+            title="Light or dark theme"
+            aria-label="Switch to light mode"
+          >
+            <span class="theme-icon theme-icon--sun" aria-hidden="true"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="4" />
+                <path
+                  d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+                />
+              </svg
+            ></span>
+            <span class="theme-icon theme-icon--moon" aria-hidden="true"
+              ><svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg
+            ></span>
+          </button>
+          <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="page">
+      <section class="container stack">
+        <article class="card about-lead">
+          <div class="about-with-photo">
+            <div class="profile-wrap" title="Abhishek Dixit">
+              <img
+                src="profile.jpg"
+                width="400"
+                height="480"
+                alt="Abhishek Dixit — B.Tech CSE, SRM IST"
+                class="profile-photo"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div>
+              <h1 class="section-title">About Me</h1>
+              <p class="muted">
+                B.Tech Computer Science student who enjoys building software end to end — from
+                logic and APIs to interfaces — and learning new tools as each project needs them.
+              </p>
+              <p class="muted">
+                Proficient in Python, Java, and SQL with practical enterprise project
+                exposure and a focus on building robust, real-world products.
+              </p>
+              <p class="status-line status-line--spaced">
+                <span class="status-dot" aria-hidden="true"></span>
+                Open to full-time, internship, and new-grad software roles
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <div class="grid-2">
+          <article class="card">
+            <h2 class="section-title">Higher Education</h2>
+            <p>
+              <strong>
+                <a
+                  class="ext-link"
+                  href="https://www.srmist.edu.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >SRM Institute of Science and Technology, Kattankulathur</a
+                >
+              </strong>
+            </p>
+            <p class="meta">B.Tech CSE | 2023 - 2027 | CGPA: 7.83 / 10</p>
+          </article>
+
+          <article class="card">
+            <h2 class="section-title">Schooling</h2>
+            <p>
+              <strong>
+                <a
+                  class="ext-link"
+                  href="https://www.dpsdurg.edu.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Delhi Public School, Durg</a
+                >
+              </strong>
+            </p>
+            <p class="meta">Class XII - CBSE, Physical Education | 2023 | 67%</p>
+            <p class="meta">Class X - CBSE, Computer Application | 2021 | 85%</p>
+          </article>
+        </div>
+
+        <div class="grid-2">
+          <article class="card">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="chip-row">
+              <span class="chip">Python</span>
+              <span class="chip">Java</span>
+              <span class="chip">C++</span>
+              <span class="chip">HTML</span>
+              <span class="chip">CSS</span>
+              <span class="chip">JavaScript</span>
+              <span class="chip">SQL</span>
+              <span class="chip">React</span>
+              <span class="chip">TypeScript</span>
+              <span class="chip">Appwrite</span>
+              <span class="chip">Supabase</span>
+              <span class="chip">Git & GitHub</span>
+              <span class="chip">Data Structures & Algorithms</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <h2 class="section-title">Languages</h2>
+            <div class="chip-row">
+              <span class="chip">English (Proficient)</span>
+              <span class="chip">Hindi (Native)</span>
+            </div>
+          </article>
+        </div>
+
+        <article class="card">
+          <h2 class="section-title">Certifications & Training</h2>
+          <ul class="list">
+            <li>Scientific Computing with Python - freeCodeCamp (Approx. 300 hours)</li>
+            <li>Beginning C++ Programming - From Beginner to Beyond (Udemy, Apr 2024)</li>
+            <li>
+              Business Application with Low Code / No Code Workshop (<a
+                class="ext-link"
+                href="https://www.srmist.edu.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >SRM IST</a
+              >, Sep 2024)
+            </li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2 class="section-title">Extracurricular</h2>
+          <p class="muted">
+            Student leadership with the Directorate of Student Affairs (DSA) — Discipline Committee at
+            <a
+              class="ext-link"
+              href="https://www.srmist.edu.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >SRM IST</a
+            >.
+          </p>
+          <div class="cta">
+            <a class="btn btn-primary" href="extracurricular.html">View details</a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p class="muted">© <span id="year"></span> Abhishek Dixit</p>
+        <div class="footer-links">
+          <a href="extracurricular.html">Extracurricular</a>
+          <a href="projects.html">Projects</a>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
